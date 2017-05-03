@@ -58,7 +58,7 @@ app.use(devMiddleware)
 // compilation error display
 app.use(hotMiddleware)
 app.use('/apis',proxyMiddleware({
-  target:'http://api.douban.com/v2',
+  target:'https://api.douban.com/v2',
   pathRewrite: {'^/apis' : ''},
   changeOrigin:true
 }))

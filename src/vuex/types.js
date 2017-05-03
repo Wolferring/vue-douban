@@ -3,3 +3,8 @@ export const COMING_LIST = 'COMING_LIST'
 
 export const COM_CONF = 'COM_CONF'
 export const FILM_DETAIL = 'FILM_DETAIL'
+export const LOADING_STATE = "LOADING_STATE"
+export const USER_INFO = "USER_INFO"
+
+
+export const MUSIC_LIST = "MUSIC_LIST"

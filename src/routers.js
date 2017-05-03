@@ -26,6 +26,11 @@ const routes = [
                 path:'/film/:id',
                 name:'film',
                 component:require('./pages/films.vue')
+            },
+            {
+                path:'/user',
+                name:'user',
+                component:require('./pages/user.vue')
             }
         ]
     }
