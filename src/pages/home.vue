@@ -52,7 +52,7 @@
 			if(this.coming.length<=0){
 				this.$store.dispatch('getComingList')
 			}
-		},
+		},	
 		computed:mapGetters({
 			inTheater:'getNowList',
 			coming:'getComingList'

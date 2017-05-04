@@ -7,6 +7,7 @@
       </transition>
     </div>
     <com-tabbar />
+    <com-loading :loading="loading"></com-loading>
   </div>
 </template>
 
@@ -14,6 +15,7 @@
 import {mapGetters} from 'vuex'
 import tabbar from './components/tabbar.vue'
 import header from './components/header.vue'
+import loading from './components/loading'
 import './assets/less/style.less';
 export default {
   name:'App',
@@ -33,7 +35,8 @@ export default {
   }),  
   components:{
     comTabbar:tabbar,
-    comHeader:header
+    comHeader:header,
+    comLoading:loading
   }
 }
 </script>

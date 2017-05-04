@@ -1,6 +1,8 @@
 <template>
-	<div id="film" v-loading.body="loading">
-		<img :src="detail.images.large" alt="">
+	<div id="film" >
+		<img 
+			:src="detail.images.large" alt=""
+		>
 		<p>
 			{{detail.summary}}
 		</p>
@@ -10,20 +12,18 @@
 	export default {
 		data(){
 			return{
-				
 			}
 		},
 		computed:{
 			detail:function(){
 				return this.$store.getters.getFilmDetail
 			},
-			loading:function(){
-				return this.detail.id!==(this.$route.params.id||"")
-			}
 		},
 		created:function(){
-			let id = this.$route.params.id;
-			this.$store.dispatch('getFilmDetail',id)
+			var id = this.$route.params.id||"";
+			if(!this.detail||this.detail.id!=id){
+				this.$store.dispatch('getFilmDetail',id)
+			}
 			document.body.scrollTop = 0;
 		},		
 	}
