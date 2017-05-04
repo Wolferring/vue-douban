@@ -3,6 +3,8 @@
 		<com-search 
 			:field="searchField"
 			:title="placeholder"
+			:history="history"
+
 		>
 		</com-search>
 		<div class="book-list">
@@ -33,7 +35,7 @@
 				    			v-if="book.summary.length>30"
 				    			@click="showFullSummary(book.id)"
 				    		>
-					    		click
+					    		展开
 				    		</el-button>
 				    	</div>
 				    </div>
@@ -121,6 +123,9 @@
 			books:function(){
 				return this.$store.getters.getBookList;
 			},
+			history:function(){
+				return this.$store.getters.getBookListHistory
+			}			
 		},
 		filters:{
 			shorten:function(e){

@@ -8,6 +8,7 @@ const state = {
 const actions = {
     getSearchResult:function({commit},payload){
         commit(types.LOADING_STATE,true)
+        commit(types[payload.field+'_HISTORY'],payload.content)
         api.getSearchResult(payload,function(res){
             commit(types[payload.field],res);
             commit(types.LOADING_STATE,false)

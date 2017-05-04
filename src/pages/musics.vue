@@ -3,6 +3,7 @@
 		<com-search 
 			:field="searchField"
 			:title="placeholder"
+			:history="history"
 		>
 			
 		</com-search>
@@ -90,6 +91,9 @@
 		computed:{
 			musics:function(){
 				return this.$store.getters.getMusicList;
+			},
+			history:function(){
+				return this.$store.getters.getMusicListHistory
 			}
 		},
 		components:{
