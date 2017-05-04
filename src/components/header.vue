@@ -43,6 +43,7 @@
 		background-color: @maincolor;
 		line-height: 2rem;
 		color: #fff;
+		z-index: 501;
 		.header-back{
 			font-size: 1.2rem;
 			width: 2rem;

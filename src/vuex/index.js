@@ -6,6 +6,7 @@ import detail from './modules/detail.js'
 import user from './modules/user.js'
 import music from './modules/musics.js'
 import search from './modules/search.js'
+import book from './modules/books.js'
 Vue.use(Vuex)
 const store = new Vuex.Store({
     modules:{
@@ -14,7 +15,8 @@ const store = new Vuex.Store({
     	detail,
     	user,
     	music,
-    	search
+    	search,
+    	book
     },
     strict:process.env.NODE_ENV !== 'production'
 })

@@ -1,9 +1,16 @@
 <template>
 	<div id="search">
-		<input type="text" :placeholder="title" v-model="searchContent">
-		<button @click="search">
-			搜索
-		</button>
+		<el-row :gutter="10">
+			<el-col :span='24'>
+				<el-input
+				  :placeholder="title"
+				  icon="search"
+				  v-model="searchContent"
+				  @keyup.enter="search"
+				  :on-icon-click="search">
+				</el-input>				
+			</el-col>
+		</el-row>
 	</div>
 </template>
 <script>
@@ -27,3 +34,8 @@
 		}
 	}
 </script>
+<style lang="less">
+	#search{
+		padding: 1vh 5vw; 
+	}
+</style>

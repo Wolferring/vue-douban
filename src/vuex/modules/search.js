@@ -7,9 +7,10 @@ const state = {
 
 const actions = {
     getSearchResult:function({commit},payload){
-    	console.log(payload)
+        commit(types.LOADING_STATE,true)
         api.getSearchResult(payload,function(res){
-            commit(types.MUSIC_LIST,res);
+            commit(types[payload.field],res);
+            commit(types.LOADING_STATE,false)
         })
     },
 }
@@ -21,6 +22,9 @@ const mutations = {
     [types.MUSIC_LIST](state,res){
         state.MUSIC_LIST = res
     },
+    [types.BOOK_LIST](state,res){
+        state.BOOK_LIST = res
+    }
 }
 
 export default {

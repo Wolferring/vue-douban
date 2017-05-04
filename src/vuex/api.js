@@ -22,11 +22,14 @@ export default {
         var type = payload.field;
         switch (type) {
             case 'MUSIC_LIST':
-                var target = '/music/search?q='+payload.content
+                var target = 'music/search?q='+payload.content
                 break;
+            case 'BOOK_LIST':
+                var target = 'book/search?q='+payload.content
+                break;                
             default:
                 // statements_def
-                var target = '/music/search?q='+payload.content
+                var target = 'music/search?q='+payload.content
 
                 break;
         }

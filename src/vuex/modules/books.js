@@ -2,20 +2,18 @@ import api from '../api.js'
 import * as types from '../types.js'
 
 const state = {
-	books:[]
+    list:null
 }
 
 const actions = {
-    //获取影片详情并设置标题
-
 }
 const getters = {
-    getBookList: state => state.books,
+    getBookList: state => state.list,
 }
 
 const mutations = {
     [types.BOOK_LIST](state,res){
-        state.books = res
+        state.list = res.books
     },
 }
 
